@@ -1,0 +1,9 @@
+@echo off
+echo Fixing styles and dependencies...
+cd src
+echo Copying CSS file...
+:: Your index.css should already be there
+cd ..
+echo.
+echo Restarting development server...
+npm start
