@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { Upload, File, X, AlertCircle } from 'lucide-react';
-import axios from 'axios';
+
 
 const DocumentUploader = ({ onAnalysisComplete }) => {
   const [files, setFiles] = useState([]);
