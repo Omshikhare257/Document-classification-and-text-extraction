@@ -163,7 +163,7 @@ function App() {
         <footer style={{ background: '#111827', color: 'white', padding: '2rem 0', marginTop: '4rem' }}>
           <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 1rem', textAlign: 'center' }}>
             <p style={{ color: '#9ca3af' }}>
-              © 2024 Ultra-Accurate Customs Document Analyzer. All rights reserved.
+              © Customs Document Analyzer. All rights reserved.
             </p>
           </div>
         </footer>
