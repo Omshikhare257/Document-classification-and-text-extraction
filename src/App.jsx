@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
-import Navbar from './components/Navbar';
 import DocumentUploader from './components/DocumentUploader';
 import CustomerClusters from './components/CustomerClusters';
 import SequentialExtraction from './components/SequentialExtraction';
@@ -33,29 +32,6 @@ function App() {
   return (
     <Router>
       <div style={{ minHeight: '100vh', background: 'linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)' }}>
-        <Navbar />
-
-        {/* Hero Header */}
-        <div style={{ background: 'linear-gradient(135deg, #eff6ff 0%, #faf5ff 100%)', padding: '2rem 0' }}>
-          <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 1rem' }}>
-            <div className="text-center">
-              <h1 style={{ 
-                fontSize: '3rem', 
-                fontWeight: 'bold', 
-                color: '#111827', 
-                marginBottom: '1rem'
-              }}>
-                🚀 ULTRA-ACCURATE CUSTOMS DOCUMENT ANALYZER
-              </h1>
-              <p style={{ fontSize: '1.25rem', color: '#4b5563', marginBottom: '0.5rem' }}>
-                99.9% Extraction Accuracy | AI-Powered Sequential Analysis
-              </p>
-              <p style={{ color: '#6b7280' }}>
-                Perfect for Customs Clearance | GST | IEC | Bill of Lading | Invoices
-              </p>
-            </div>
-          </div>
-        </div>
 
         {/* Main Content */}
         <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '2rem 1rem' }}>
@@ -181,40 +157,6 @@ function App() {
               </div>
             </>
           )}
-
-          {/* Features Guide */}
-          <div className="card" style={{ marginTop: '2rem' }}>
-            <h2 style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#111827', marginBottom: '1rem' }}>
-              💡 Ultra-Accurate Extraction Guide
-            </h2>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <h3 style={{ fontSize: '1.125rem', fontWeight: 'bold', color: '#2563eb', marginBottom: '0.5rem' }}>
-                  🎯 99.9% Accuracy Features
-                </h3>
-                <ul style={{ listStyle: 'none', padding: 0 }}>
-                  <li style={{ marginBottom: '0.5rem', color: '#4b5563' }}>✅ GST Numbers: 15-character format validation</li>
-                  <li style={{ marginBottom: '0.5rem', color: '#4b5563' }}>✅ PAN Numbers: 10-character alphanumeric validation</li>
-                  <li style={{ marginBottom: '0.5rem', color: '#4b5563' }}>✅ Container Numbers: 4 letters + 7 digits validation</li>
-                  <li style={{ marginBottom: '0.5rem', color: '#4b5563' }}>✅ IEC Codes: 10-digit validation</li>
-                  <li style={{ marginBottom: '0.5rem', color: '#4b5563' }}>✅ Email & Phone: Format verification</li>
-                </ul>
-              </div>
-              
-              <div>
-                <h3 style={{ fontSize: '1.125rem', fontWeight: 'bold', color: '#9333ea', marginBottom: '0.5rem' }}>
-                  📊 Best Practices
-                </h3>
-                <ul style={{ listStyle: 'none', padding: 0 }}>
-                  <li style={{ marginBottom: '0.5rem', color: '#4b5563' }}>✅ Upload clear, high-resolution scans (300+ DPI)</li>
-                  <li style={{ marginBottom: '0.5rem', color: '#4b5563' }}>✅ Ensure all text is readable</li>
-                  <li style={{ marginBottom: '0.5rem', color: '#4b5563' }}>✅ Include complete documents (all pages)</li>
-                  <li style={{ marginBottom: '0.5rem', color: '#4b5563' }}>✅ Use standard formats (PDF, JPG, DOCX)</li>
-                </ul>
-              </div>
-            </div>
-          </div>
         </div>
 
         {/* Footer */}
