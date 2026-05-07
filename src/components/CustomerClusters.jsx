@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Users, Building, Mail, Phone, MapPin, FileText, ChevronDown, ChevronUp } from 'lucide-react';
+import { Users, Building, FileText, ChevronDown, ChevronUp } from 'lucide-react';
 
 const CustomerClusters = ({ data }) => {
   const [expandedClusters, setExpandedClusters] = useState(new Set([0]));
@@ -35,16 +35,11 @@ const CustomerClusters = ({ data }) => {
         const clusterDocs = docIndices.map(idx => data.extractedData[idx]).filter(Boolean);
         const isExpanded = expandedClusters.has(parseInt(clusterId));
         
-        // Aggregate data for this cluster
         const companies = new Set();
         const gstNumbers = new Set();
         const panNumbers = new Set();
-        const emails = new Set();
-        const phones = new Set();
         
         clusterDocs.forEach(doc => {
-          // In a real implementation, you'd extract these from structured data
-          // For demo, we'll show placeholder data
           companies.add(`${doc.filename.split('.')[0]} Ltd.`);
         });
 
@@ -52,7 +47,6 @@ const CustomerClusters = ({ data }) => {
 
         return (
           <div key={clusterId} className="card">
-            {/* Cluster Header */}
             <button
               onClick={() => toggleCluster(parseInt(clusterId))}
               className="w-full flex items-center justify-between mb-4"
@@ -78,11 +72,9 @@ const CustomerClusters = ({ data }) => {
               </div>
             </button>
 
-            {/* Cluster Content */}
             {isExpanded && (
               <div className="space-y-6 animate-fadeIn">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                  {/* Documents & Classification */}
                   <div>
                     <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
                       <FileText className="w-5 h-5" />
@@ -110,7 +102,6 @@ const CustomerClusters = ({ data }) => {
                     </div>
                   </div>
 
-                  {/* Validated Identifiers */}
                   <div>
                     <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
                       <Building className="w-5 h-5" />
@@ -146,7 +137,6 @@ const CustomerClusters = ({ data }) => {
                   </div>
                 </div>
 
-                {/* Statistics */}
                 <div className="border-t pt-4">
                   <h4 className="text-lg font-semibold text-gray-900 mb-4">📊 Statistics</h4>
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
