@@ -122,7 +122,7 @@ const DocumentUploader = ({ onAnalysisComplete }) => {
 
   return (
     <div className="card animate-fadeIn">
-      <h2 className="text-2xl font-bold text-gray-900 mb-6">📤 Upload Documents for Ultra-Accurate Analysis</h2>
+      <h2 className="text-2xl font-bold text-gray-900 mb-6">📤 Upload Documents for Analysis</h2>
 
       {/* Upload Area */}
       <div
@@ -194,7 +194,7 @@ const DocumentUploader = ({ onAnalysisComplete }) => {
                 </>
               ) : (
                 <>
-                  🚀 Start Ultra-Accurate Analysis
+                  🚀 Start Analysis
                 </>
               )}
             </button>
