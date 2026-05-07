@@ -17,6 +17,25 @@ const Navbar = () => {
             <span className="text-xl font-bold gradient-text">Customs Analyzer</span>
           </Link>
 
+          {/* Desktop Menu */}
+          <div className="hidden md:flex items-center space-x-8">
+            <Link to="/" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+              Home
+            </Link>
+            <Link to="/services" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+              Services
+            </Link>
+            <Link to="/about" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+              About
+            </Link>
+            <Link to="/contact" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+              Contact
+            </Link>
+            <button className="btn-primary">
+              Get Started
+            </button>
+          </div>
+
           {/* Mobile Menu Button */}
           <button 
             onClick={() => setIsOpen(!isOpen)}
